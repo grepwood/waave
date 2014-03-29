@@ -1,0 +1,21 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!! Waave needs ffmpeg shared libraries !!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+-> comfigure ffmpeg with --enable-shared
+-> for ffmpeg-0.5 configure ffmpeg with --enable-shared --enable-swscale 
+
+-----------------
+EXEMPLE PROGRAMS
+-----------------
+Exemple programs can be found in the test/ folder.
+-> waaveplayer12.c for sdl 1.2
+-> waaveplayer20.c for sdl 2.0
+
+compile with :
+
+gcc -g `sdl-config --cflags` waaveplayer12.c -o waaveplayer12 `sdl-config --libs` -lwaave
+
+-------------
+DOCUMENTATION
+-------------
+To build the documentation use the doxygen command.

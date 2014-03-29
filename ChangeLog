@@ -1,0 +1,35 @@
+2012-12-6 Baptiste Pellegrin <pellegrin.baptiste@gmail.com>
+	*added the filterBuffer method in the streaming object
+	*added "WV_getStreamWidth", "WV_getStreamHeight"
+	*new SDL1.2 streaming object that use HW surface
+	*added updateFlag on the streaming objects
+
+2012-11-20  Baptiste Pellegrin <pellegrin.baptiste@gmail.com>
+	*use frame->extended_data instead of frame->data[0] to resample audio
+	*waave now work with ffmpeg version 1.0, 0.11.2, 0.10.6, 0.9.2, 0.8.12, 0.7.13, 0.6.6, 0.5.10
+
+2012-09-01  Baptiste Pellegrin <pellegrin.baptiste@gmail.com>
+	*corrected : WVStreamingObject::close isn't executed by the main thread
+	*added the "WV_getVolume", "WV_getDBVolume" and "WV_getVolumeDBPitche" commands
+	*added the "WV_getStreamingMethod" and "WV_getSyncMethod" commands
+
+2012-07-24  Baptiste Pellegrin <pellegrin.baptiste@gmail.com>
+	*added the "WV_stopStream" command
+	*now waave signal EOF when we seek after stream end
+
+2012-07-23  Baptiste Pellegrin <pellegrin.baptiste@gmail.com>
+	*added - extern "C" - for c++ support
+	*renamed "private" struct field for c++ support
+	*changed WV_getStream prototype
+
+2012-07-18  Baptiste Pellegrin <pellegrin.baptiste@gmail.com>
+
+	*added support for SDL-2.0
+	*new streming object using sdl renderer
+
+2012-07-06  Baptiste Pellegrin <pellegrin.baptiste@gmail.com>
+
+	*first release of waave library (1.01)
+	*work with ffmpeg version 0.11.1, 0.10.2, 0.9.1, 0.8.11, 0.7.12, 0.6.5, 0.5.8
+	*work with SDL-1.2
+
