@@ -22,6 +22,7 @@ SDL_Renderer* screenRenderer;
 int winWidth;
 int winHeight;
 int fullscreenFlag = 0;
+SDL_Rect destRect;
 
 
 /* playing stream */
@@ -231,7 +232,11 @@ int main(int argc, char** argv)
   if(streamType == WV_STREAM_TYPE_VIDEO || streamType == WV_STREAM_TYPE_AUDIOVIDEO){
     screenRenderer = SDL_CreateRenderer(screen, -1, SDL_RENDERER_ACCELERATED);
     SDL_RenderClear(screenRenderer);
-    streamObj = WV_getStreamRendererObj(screenRenderer, NULL);
+    destRect.x = SDL_WINDOWPOS_UNDEFINED;
+    destRect.y = SDL_WINDOWPOS_UNDEFINED;
+    destRect.w = winWidth;
+    destRect.h = winHeight;
+    streamObj = WV_getStreamRendererObj(screenRenderer,&destRect,50);
     WV_setStreamingMethod(stream, streamObj);
   }
 
